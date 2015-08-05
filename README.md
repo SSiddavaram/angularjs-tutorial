@@ -32,3 +32,4 @@ You need to install Node.js and then the development tools. Node.js comes with a
 * Data Binding  
 * Controller
 * Basic Input Validation
+* Custom Directive
