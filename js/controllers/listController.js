@@ -6,6 +6,15 @@ app.controller('ListController', ['$scope',
   	$scope.list.todos = [{text:'learn angular', done:true},
       			  {text:'build an angular app', done:false}];
 
+    $scope.roles = [
+          {"id": 1, "name": "Manager", "assignable": true},
+          {"id": 2, "name": "Developer", "assignable": true},
+          {"id": 3, "name": "Reporter", "assignable": true}
+    ];
+    
+    $scope.member = {roles: []};
+    $scope.selected_items = [];
+
     $scope.addTodo = function() {
         $scope.list.todos.push({text:$scope.todoText, done:false});
         $scope.todoText = '';
@@ -25,6 +34,11 @@ app.controller('ListController', ['$scope',
 	    angular.forEach(oldTodos, function(todo) {
 	        if (!todo.done) $scope.list.todos.push(todo);
 	    });
+    };
+
+    $scope.getRole = function(id){
+      var roleObj = _.find($scope.roles, function(role){return id===role.id;});
+      return roleObj.name;
     };
 
 }]);

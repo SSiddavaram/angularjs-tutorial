@@ -3,10 +3,15 @@
 <head>
 	<title></title>
 	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="lib/underscore-min.js"></script>
+	<link rel="stylesheet" href="css/font-awesome.min.css"></link>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body ng-app="app">
-	<div>
+	<div class="padding2">
 		<br/>   
 		<label>First name: </label><input type="text" ng-model="firstName" placeholder="Enter first name here"/>
 	    <label>Last name: </label><input type="text" ng-model="lastName" placeholder="Enter last name here"/> 
@@ -14,7 +19,7 @@
 	    <h2>Hello, {{firstName}} {{lastName}}!</h2>  
 	</div>
 
-	<div ng-controller="ListController">
+	<div ng-controller="ListController" class="padding2">
 		 <span>{{remaining()}} of {{list.todos.length}} remaining</span> [ <a href="" ng-click="archive()">archive</a> ]
 
 		<ul class="unstyled">
@@ -32,9 +37,20 @@
 	        	<span class="error" ng-show="submitted &&form.todoText.$error.required">Required!</span>
 	        </div>
         </form>
+		<hr/>
+		<div>
+			<dropdown-multiselect pre-selected="member.roles" model="selected_items" options="roles"></dropdown-multiselect>
+    		<br/><br/>
+    		selected roles = {{selected_items | json}}<br/>
+
+    		<ul ng-repeat="roleId in selected_items">
+    			<li>{{roleId}} : {{getRole(roleId)}}</li>
+    		</ul>
+		</div>
 	</div>
 	
 	<script type="text/javascript" src="js/app.js"></script> 
 	<script type="text/javascript" src="js/controllers/listController.js"></script> 
+	<script type="text/javascript" src="js/directives/multiselectDropdown.js"></script> 
 </body>
 </html>
