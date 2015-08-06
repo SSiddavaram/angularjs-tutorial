@@ -1,0 +1,29 @@
+	<div ng-controller="ListController" class="padding2">
+		 <span>{{remaining()}} of {{list.todos.length}} remaining</span> [ <a href="" ng-click="archive()">archive</a> ]
+
+		<ul class="unstyled">
+	        <li ng-repeat="todo in list.todos">
+	          <input type="checkbox" ng-model="todo.done">
+	          <span class="done-{{todo.done}}">{{todo.text}}</span>
+	        </li>
+        </ul>
+
+        <form ng-submit="addTodo();submitted=false;" name="form">
+        	<div class="controls">
+	        	<input type="text" name="todoText" ng-model="todoText"  size="30"
+	               placeholder="add new todo here" required>           
+	        	<input class="btn-primary" type="submit" value="add" ng-click="submitted = true;">
+	        	<span class="error" ng-show="submitted &&form.todoText.$error.required">Required!</span>
+	        </div>
+        </form>
+		<hr/>
+		<div>
+			<dropdown-multiselect pre-selected="member.roles" model="selected_items" options="roles"></dropdown-multiselect>
+    		<br/><br/>
+    		selected roles = {{selected_items | json}}<br/>
+
+    		<ul ng-repeat="roleId in selected_items">
+    			<li>{{roleId}} : {{getRole(roleId)}}</li>
+    		</ul>
+		</div>
+	</div>
