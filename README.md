@@ -28,6 +28,7 @@ You need to install Node.js and then the development tools. Node.js comes with a
   ```
   
 ### Tasks:
+* Routing
 * ng-model
 * Data Binding  
 * Controller
