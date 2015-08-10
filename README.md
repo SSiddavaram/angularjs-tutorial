@@ -34,3 +34,4 @@ You need to install Node.js and then the development tools. Node.js comes with a
 * Controller
 * Basic Input Validation
 * Custom Directive
+* Filters
