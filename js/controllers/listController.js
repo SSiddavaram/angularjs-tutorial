@@ -1,6 +1,6 @@
 var app = angular.module('app');
-app.controller('ListController', ['$scope',
-	function($scope) {
+app.controller('ListController', ['$scope', 'Person',
+	function($scope, Person) {
 
 	$scope.list= {};
   	$scope.list.todos = [{text:'learn angular', done:true},
@@ -41,4 +41,9 @@ app.controller('ListController', ['$scope',
       return roleObj.name;
     };
 
+    $scope.getPersons = function(){
+        Person.getPersons().then(function(response){
+            $scope.persons = response.data;
+        });
+    };
 }]);

@@ -26,4 +26,9 @@
     			<li>{{roleId}} : {{getRole(roleId)}}</li>
     		</ul>
 		</div>
+
+		<hr/>
+		<div ng-init="getPersons()">
+			Data from service using <code>$http</code>: {{persons | json}}
+		</div>
 	</div>
