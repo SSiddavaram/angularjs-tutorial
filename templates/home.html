@@ -3,5 +3,9 @@
 		<label>First name: </label><input type="text" ng-model="firstName" placeholder="Enter first name here"/>
 	    <label>Last name: </label><input type="text" ng-model="lastName" placeholder="Enter last name here"/> 
 	    <hr/>
-	    <h2>Hello, {{firstName}} {{lastName}}!</h2>  
+	    <h2>Hello, {{firstName}} {{lastName}}!</h2>  <br/>
+
+	    Name with uppercase filter: {{firstName | uppercase}}<br/>
+
+	    Reverse Text Custom Filter: {{firstName | reversetext}}
 	</div>
