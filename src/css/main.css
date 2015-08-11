@@ -1,0 +1,16 @@
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+.error {
+	background-color:#f2dede;
+	border-color:#ebccd1;
+	color:#a94442;
+	margin:2px;
+	border-radius:4px
+}
+
+.padding2 {
+	padding: 2%;
+}
