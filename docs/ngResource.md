@@ -46,4 +46,4 @@ The `get()` function in the above snippet issues a `GET` request to `/api/post/:
 The function `query()` issues a `GET` request to `/api/post` (notice there is no :id) and returns an empty array. This array is populated when the data arrives from server.
 The `save()` function issues a `POST` request to `/api/post` with the first argument as the post body. The second argument is a callback which is called when the data is saved. 
 
-I will be using a [Restful API demo](https://github.com/SSiddavaram/RestfulWSExample) from my repository in order to demonstrate `$resource`.  
+I will be using a [Restful API demo](https://github.com/SSiddavaram/RestfulWS) from my repository in order to demonstrate `$resource`.  
