@@ -14,17 +14,17 @@ You need to install Node.js and then the development tools. Node.js comes with a
     npm install -g grunt-cli 
    ```
    
-### App server
-  Install http-server 
+### Grunt modules
+  The following will install all the modules specified in `package.json` file.
   
   ```
-    npm install http-server
+    npm install 
   ```
   
 ### Run the Application
 
   ```
-    http-server -o
+    grunt local
   ```
   
 ### Tasks:
@@ -35,3 +35,5 @@ You need to install Node.js and then the development tools. Node.js comes with a
 * Basic Input Validation
 * Custom Directive
 * Filters
+* $http
+* $resource
